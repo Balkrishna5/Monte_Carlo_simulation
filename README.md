@@ -1,7 +1,3 @@
-Perfect — let’s write this in a **clean, structured, step-by-step** way, just like a proper README or project documentation.
-
----
-
 # **What is Monte Carlo Simulation?**
 
 Monte Carlo Simulation is a **numerical method** used to model and analyze systems that are affected by **randomness and uncertainty**.
@@ -47,25 +43,22 @@ Monte Carlo follows a very logical process:
 1. **Model the randomness**
 
    Stock prices are assumed to follow:
-   [
-   dS = rSdt + \sigma S dW
-   ]
+  <img width="287" height="57" alt="image" src="https://github.com/user-attachments/assets/10fe4970-5e9a-414e-906e-b977037bad3a" />
+
    which means prices grow with a drift and fluctuate randomly.
 
 2. **Generate random shocks**
 
    We generate random numbers from a normal distribution:
-   [
-   Z \sim N(0,1)
-   ]
+   <img width="179" height="50" alt="image" src="https://github.com/user-attachments/assets/0871c6ca-e50f-40c7-874a-cc10229438f0" />
+
    These represent new information hitting the market.
 
 3. **Simulate price paths**
 
    Using these random numbers, we generate thousands of future price paths:
-   [
-   S_{t+1} = S_t e^{(r-\frac12\sigma^2)\Delta t + \sigma \sqrt{\Delta t} Z}
-   ]
+  <img width="388" height="74" alt="image" src="https://github.com/user-attachments/assets/aef24a3b-9ed7-4e3e-8802-055d02e974a9" />
+
 
 4. **Apply the payoff rule**
 
